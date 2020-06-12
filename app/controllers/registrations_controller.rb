@@ -19,4 +19,17 @@ class RegistrationsController < ApplicationController
       render json: { status: 500 }
     end
   end
+
+  private
+  
+    def user_params
+      params.permit(
+        :email,
+        :password,
+        :password_confirmation,
+        :username,
+        :first_name,
+        :last_name
+      )
+    end
 end
