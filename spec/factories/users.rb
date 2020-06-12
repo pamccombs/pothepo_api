@@ -3,7 +3,7 @@ FactoryBot.define do
       username { Faker::Internet.username }
       email 'foo@bar.com'
       password 'foobar'
-      first_name { Faker::Name.name }
-      last_name { Faker::Name.name }
+      first_name { Faker::Name.first_name }
+      last_name { Faker::Name.last_name }
     end
   end
